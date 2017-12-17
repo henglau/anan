@@ -1,0 +1,85 @@
+<!-- 超限查询  -->
+<div class="mp-content over-content" id="J_overform">
+	<form class="form-horizontal">
+		<div class="form-group mp-groupmb30">
+			<div class="col-sx-12 col-sm-12">
+				<label class="itit">起始时间：</label>
+				<div class="icount">
+					<input type="text" class="turn tranTime" id="J_StartTime" readonly="readonly" placeholder="起始时间">
+				</div>
+			</div>
+		</div>
+		<div class="form-group mp-groupmb30">
+			<div class="col-sx-12 col-sm-12">
+				<label class="itit">结束时间：</label>
+				<div class="icount">
+					<input type="text" class="turn tranTime" id="J_EndTime" readonly="readonly" placeholder="结束时间">
+				</div>
+			</div>
+		</div>
+		<div class="form-group mp-groupmb30">
+			<div class="col-sx-12 col-sm-12">
+				<label class="itit">预检车道：</label>
+				<div class="icount">
+					<select id="J_YJCD">
+						<option value="0">忽略</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group mp-groupmb30">
+			<div class="col-sx-12 col-sm-12">
+				<label class="itit">超重门槛：</label>
+				<div class="icount">
+					<input type="number" class="tranTime overweight border-red2 clear-float" id="J_minczmk" placeholder="0" value="0">
+					<label>-</label>
+					<input type="number" class="tranTime overweight clear-float" id="J_maxczmk" placeholder="0" value="100">
+					<label>%</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group mp-groupmb30">
+			<div class="col-sx-12 col-sm-12">
+				<label class="itit">省市名称：</label>
+				<div class="icount">
+					<select id="J_city" class="city"></select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group mp-groupmb30">
+			<div class="col-sx-12 col-sm-12">
+				<label class="itit">县区名称：</label>
+				<div class="icount">
+					<select id="J_county"></select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group mp-groupmb30">
+			<div class="col-sx-12 col-sm-12">
+				<label class="itit">监测地点：</label>
+				<div class="icount">
+					<select id="J_SiteRegister">
+						<option value="">忽略</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group foter">
+			<div class="col-sx-12 col-sm-12">
+				<button type="button" class="btn btn-primary" id="J_btnQuery" >查询</button>
+			</div>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	baseApp.page.overrunPage.Init();
+</script>

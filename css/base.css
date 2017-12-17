@@ -1,0 +1,119 @@
+body {
+	margin: 0;
+	padding: 50px 0;
+	font-size: 17px;
+	/*margin: 50px 0;
+	padding: 0;*/
+}
+
+.navbar {
+	border: 0;
+	margin: 0;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+	color: #a7a7a7;
+	text-decoration: none;
+}
+
+.navbar-lightblue {
+	background-color: #337ab7;
+	border-color: #2e6da4;
+}
+
+.navcheck {
+	display: block;
+	padding: 0;
+	margin: 0;
+	height: 50px;
+	line-height: 50px;
+	color: #a7a7a7;
+	text-decoration: none;
+}
+
+.color-white {
+	color: #fff;
+}
+
+.font-weight {
+	font-weight: bold;
+}
+
+.navcheck.action {
+	color: #fff;
+}
+
+.navcheck p {
+	text-align: center;
+	font-size: 17px;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus {
+	-webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.clear-float{
+	float: none;
+}
+
+.no-pading{
+	padding: 0;
+}
+
+.mask-layer{
+	position: fixed;
+	top: 0;
+    left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	-webkit-opacity: 0.5;
+	z-index: 99999998;
+	
+}
+.mask-win{
+	position:fixed;
+	width: 100%;
+	z-index: 99999999;
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    left: 0;
+         top: 30%;
+    height: :100%;
+}
+.mask-win img{
+	width: 100%;
+	height: 100%;
+}
+
+.overrun{
+	 /*background-color: #FF0000;*/
+	 
+	 color: red;
+}
+
+.overrun td{
+	color: #fff;
+	color: red;
+}
+
+.overrun:hover{
+	background: #FFFF00;
+}
+.actionoverrun {
+    background: #FFFF00;
+}

@@ -1,0 +1,243 @@
+.btn-exit,
+.btn-exit:hover,
+.btn-exit:focus{
+	
+	color: #000;
+	width: 100%;
+	background-color: #FF0000;
+	border: 1px solid #FF0000;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.2;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+}
+/*登录页开始*/
+.btn{
+	border-radius: 0;
+	line-height: 2.2;
+	width: 100%;
+	font-size: 17px;
+}
+
+.log-content {
+	padding-top: 20%;
+}
+
+.log-content input {
+	border: 0;
+	border-bottom: 2px solid #5BC0DE;
+	border-radius: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-webkit-transition: none;
+	transition: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+.log-foter {
+	padding-top: 20%;
+	text-align: center;
+}
+
+.log-foter button {
+	width: 100%;
+}
+
+/*车牌查询*/
+.mp-groupmb30 {
+	margin-bottom: 30px;
+}
+
+.mp-content {
+	margin-top: 20px;
+}
+
+.mp-content .itit{
+	position: absolute;
+	top:10px /*11px*/;
+	font-weight:normal;
+	/*font-size: 16px;*/
+}
+.mp-content .icount{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	overflow: hidden;
+	padding-left: /*70*/85px;
+}
+
+.icount input,
+.icount select{
+	position: relative;
+	float: right;
+	width: 100%;
+	height: 40px;
+	border: 0;
+	border-radius: 0;
+	padding-top: 2px;
+	-webkit-appearance:none;
+	appearance:none;
+	border:none;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	background-color: #fff;
+	outline: none;
+}
+
+.icount select{
+	background-image: url(../image/jiantou.png);
+	background-size: 14px 14px;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-position-y: 12px;
+	background-repeat-x: 20px;
+}
+
+/*.mp-content input,
+.mp-content select {
+	width: 70%;
+	height: 40px;
+	border: 0;
+	border-radius: 0;
+}*/
+
+.tranTime {
+	border: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-webkit-transition: none;
+	transition: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+.turn::-webkit-input-placeholder {
+	/* WebKit browsers */
+	font-size: 17px;
+	color: #5BC0DE;
+	/*font-weight: 700;*/
+}
+
+.turn:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	font-size: 17px;
+	color: #5BC0DE;
+	/*font-weight: 700;*/
+}
+
+.turn::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	font-size: 17px;
+	color: #5BC0DE;
+	/*font-weight: 700;*/
+}
+
+.turn::-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	font-size: 17px;
+	color: #5BC0DE;
+	/*font-weight: 700;*/
+}
+
+.mp-content .plateText {
+	border-bottom: 2px solid mediumvioletred;
+	width: 100%;
+	border-radius: 0;
+}
+
+.foter {
+	padding-top: 30px;
+}
+
+.mp-table table{
+	width: 100%;
+	margin: 10px 0;
+}
+
+table img{
+	width: 100%;
+	height: 100%;
+}
+
+/*超限查询*/
+.over-content .overweight{
+	width: 42%;
+	border-bottom: 2px solid #000;
+}
+.over-content .border-red2{
+	border-bottom: 2px solid red;
+}
+
+
+.mp-content .city, .mp-content .city
+{
+	width: 95%;
+}
+
+.icount .clear-float{
+	float: none;
+}
+
+.pd5{
+	padding: 0 5px;
+}
+table tr{
+	height: 25px;
+	line-height: 25px;
+}
+
+table tr th,
+table tr td{
+	font-size: 12px;
+	font-weight: 100;
+}
+.fenye{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.btn-fenye{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	z-index: 10;
+}
+
+.fenye-prev{
+	top: 0;
+	left: 0;
+}
+
+.fenye-next{
+	top: 0;
+	right: 0;
+}
+.fenyetit{
+	position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 1;
+}
+.fenyetit p{
+	display: inline-block;
+}

@@ -1,0 +1,198 @@
+<!--详情页面-->
+<div class="mp-content" id="J_mpform">
+	<style type="text/css">
+		.mp-content .icount{
+			line-height: 45px;
+		}
+	</style>
+	<div class="form-group mp-groupmb30">
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">检测单号：</label>
+			<div class="icount">
+				<span id="txtOrderNo"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">日期时间：</label>
+			<div class="icount">
+				<span id="txtDateTime"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">轴型：</label>
+			<div class="icount">
+				<span id="txtZX"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">车牌：</label>
+			<div class="icount">
+				<span id="txtCarNo"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">车货重量：</label>
+			<div class="icount">
+				<span id="txtCHZL"></span>吨
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超限标志：</label>
+			<div class="icount">
+				<span id="txtCXBZ"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">限重：</label>
+			<div class="icount">
+				<span id="txtXZ"></span>吨
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超限：</label>
+			<div class="icount">
+				<span id="txtCX"></span>吨
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超限比例：</label>
+			<div class="icount">
+				<span id="txtCXBL"></span>%
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">车货宽度：</label>
+			<div class="icount">
+				<span id="txtCHKD"></span>米
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超宽标志：</label>
+			<div class="icount">
+				<span id="txtCKBL"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">限宽：</label>
+			<div class="icount">
+				<span id="txtXK"></span>米
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超宽：</label>
+			<div class="icount">
+				<span id="txtCK"></span>米
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超宽比例：</label>
+			<div class="icount">
+				<span id="txtCHBL"></span>%
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">车货高度：</label>
+			<div class="icount">
+				<span id="txtCHGD"></span>米
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超高标志：</label>
+			<div class="icount">
+				<span id="txtCGBZ"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">限高：</label>
+			<div class="icount">
+				<span id="txtXG"></span>米
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超高：</label>
+			<div class="icount">
+				<span id="txtCG"></span>米
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超高比例：</label>
+			<div class="icount">
+				<span id="txtCGBL"></span>%
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">车货长度：</label>
+			<div class="icount">
+				<span id="txtCHCD"></span>米
+			</div>
+		</div>
+
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超长标志：</label>
+			<div class="icount">
+				<span id="txtCCBZ"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">限长：</label>
+			<div class="icount">
+				<span id="txtXC"></span>米
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超长：</label>
+			<div class="icount">
+				<span id="txtCC"></span>米
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">超长比例：</label>
+			<div class="icount">
+				<span id="txtCCBL"></span>%
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">检测车速：</label>
+			<div class="icount">
+				<span id="txtJCCS"></span>km/h
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">检测车道：</label>
+			<div class="icount">
+				<span id="txtJCCD"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">检测通道：</label>
+			<div class="icount">
+				<span id="txtJCTD"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">站点类型：</label>
+			<div class="icount">
+				<span id="txtZDLX"></span>
+			</div>
+		</div>
+
+		<div class="col-sx-12 col-sm-12">
+			<label class="itit">站点名称：</label>
+			<div class="icount">
+				<span id="txtZDMC"></span>
+			</div>
+		</div>
+		<div class="col-sx-12 col-sm-12">
+			<a href="javascript:void(0)" id="txtCQTP" data-url="">车头图片</a>
+			<a href="javascript:void(0)" id="txtCHTP" data-url="">车尾图片</a>
+		</div>
+			<div class="col-sx-12 col-sm-12">
+				 <div class="log-foter">
+			<button type="button" class="btn btn-primary btn-gray" id="btnGoBack">返回</button>
+		</div>
+				</div>
+	</div>
+</div>
+<script type="text/javascript">
+	baseApp.page.DetailInfoPage.Init();
+</script>

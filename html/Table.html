@@ -1,0 +1,29 @@
+<div class="mp-table" id="J_prevtable">
+	<table>
+		<thead>
+			<tr>
+				<!--<th>序号</th>-->
+				<th>检测时间</th>
+				<th>车牌号码</th>
+				<!--<th>轴数</th>-->
+				<th>重量(吨)</th>
+				<!--<th>超限量(吨)</th>-->
+				<th>站点名称</th>
+			</tr>
+		</thead>
+		<tbody id="J_tableTbody">
+
+		</tbody>
+	</table>
+	<div class="fenye" id="J_fenye" >
+		<p class="fenyetit">
+			当前页：<span id="J_currentpage">1</span>
+			总页数：<span id="J_pagecount">1</span>
+		</p>
+		<button type="button" id="J_btnPrev" class="btn-fenye fenye-prev" data-minpage="1" data-page="1">上一页</button>
+		<button type="button" id="J_btnNext" class="btn-fenye fenye-next" data-maxpage="1" data-page="1">下一页</button>
+	</div>
+</div>
+<script type="text/javascript">
+	baseApp.page.tablePage.Init();
+</script>

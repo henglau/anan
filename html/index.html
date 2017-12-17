@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>安安公路</title>
+		<!-- Bootstrap -->
+		<link href="../css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.icons.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.frame.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.frame.android.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.frame.android-holo.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.frame.ios-classic.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.frame.ios.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.frame.sense-ui.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.frame.wp.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.scroller.android.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.scroller.android-holo.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.scroller.ios-classic.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.scroller.sense-ui.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.scroller.wp.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.image.css" rel="stylesheet" type="text/css" />
+	
+	    <link href="../css/mobiscroll.android-holo-light.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.wp-light.css" rel="stylesheet" type="text/css" />
+	    <link href="../css/mobiscroll.mobiscroll-dark.css" rel="stylesheet" type="text/css" />
+	    
+	    
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/base.css" rel="stylesheet">
+		<link href="../css/page.css" rel="stylesheet" />
+		<!--[if lt IE 9]>
+	      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://cdn.bootcss.com/respond.../js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+	</head>
+
+	<body>
+		<nav class="navbar navbar-lightblue navbar-fixed-top" id="J_navtop">
+			<div class="container-fluid">
+				<div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="navcheck color-white">
+						<p class="font-weight" id="J_navtoptit"></p>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<form method="post" action="" class="form-horizontal">
+			<div class="container-fluid" id="J_container"></div>
+		</form>
+		<nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom" id="J_navbottom">
+			<div class="container-fluid">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pd5" data-event="nav" data-url="numberPlates.html">
+					<a href="javascript:void(0)" class="navcheck">
+						<p>车牌查询</p>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pd5" data-event="nav" data-url="preview.html">
+					<a href="javascript:void(0)" class="navcheck">
+						<p>车辆查询</p>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pd5" data-event="nav" data-url="overrun.html">
+					<a href="javascript:void(0)" class="navcheck">
+						<p>超限查询</p>
+					</a>
+				</div>
+				<!--注释我的-->
+				<!--<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pd5" data-event="nav" data-url="personalcenter.html">
+					<a href="javascript:void(0)" class="navcheck">
+						<p>我的</p>
+					</a>
+				</div>-->
+			</div>
+		</nav>
+		<div class="hidden" id="J_layerWin">
+			<div class="mask-layer" id="J_maskLayer"></div>
+			<div class="mask-win" id="J_maskWin"></div>
+		</div>
+
+		<script type="text/javascript" src="../script/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../script/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../script/bootstrap-datepicker.js"></script>
+		<script type="text/javascript" src="../script/bootstrap-datepicker.zh-CN.js"></script>
+		<script type="text/javascript" src="../script/json2.js"></script>
+		<script type="text/javascript" src="../script/template.js"></script>
+		<script type="text/javascript" src="../script/base.js"></script>
+		<script type="text/javascript" src="../script/page.js"></script>
+		<script src="../script/mobiscroll.appframework.js"></script>
+    <script src="../script/mobiscroll.core.js"></script>
+    <script src="../script/mobiscroll.frame.js"></script>
+    <script src="../script/mobiscroll.scroller.js"></script>
+
+    <script src="../script/mobiscroll.util.datetime.js"></script>
+    <script src="../script/mobiscroll.datetimebase.js"></script>
+    <script src="../script/mobiscroll.datetime.js"></script>
+    <script src="../script/mobiscroll.select.js"></script>
+    <script src="../script/mobiscroll.listbase.js"></script>
+    <script src="../script/mobiscroll.image.js"></script>
+    <script src="../script/mobiscroll.treelist.js"></script>
+
+    <script src="../script/mobiscroll.frame.android.js"></script>
+    <script src="../script/mobiscroll.frame.android-holo.js"></script>
+    <script src="../script/mobiscroll.frame.ios-classic.js"></script>
+    <script src="../script/mobiscroll.frame.ios.js"></script>
+    <script src="../script/mobiscroll.frame.jqm.js"></script>
+    <script src="../script/mobiscroll.frame.sense-ui.js"></script>
+    <script src="../script/mobiscroll.frame.wp.js"></script>
+
+    <script src="../script/mobiscroll.android-holo-light.js"></script>
+    <script src="../script/mobiscroll.wp-light.js"></script>
+    <script src="../script/mobiscroll.mobiscroll-dark.js"></script>
+    
+    <script src="../script/i18n/mobiscroll.i18n.cs.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.de.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.en-UK.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.es.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.fa.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.fr.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.hu.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.it.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.ja.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.nl.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.no.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.pl.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.pt-BR.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.pt-PT.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.ro.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.ru.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.ru-UA.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.sk.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.sv.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.tr.js"></script>
+    <script src="../script/i18n/mobiscroll.i18n.zh.js"></script>
+	</body>
+	<script type="text/javascript">
+		baseApp.page.IndexPage.Init();
+	</script>
+
+</html>

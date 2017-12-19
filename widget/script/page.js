@@ -922,7 +922,7 @@ try {
             var provinces = baseApp.storage.local.get("uprovince");
 
             // js 完成 初始化请求数据
-            baseApp.page.request.ajax("get", "QuestCityRegionV2/" + serverusers.name + "/" + serverusers.pwd + "/" + provinces,
+            baseApp.page.request.ajax("get", "QuestCityRegionV3/" + serverusers.name + "/" + serverusers.pwd + "/" + provinces,
                 null,
                 function (data) {
                     if (data.nResult == 0) {
@@ -975,7 +975,7 @@ try {
                                 cityAndCountyJson.data.push(jsons);
                             }
                         }
-
+                        alert(cityAndCountyJson);
                         // 存入缓存
                         baseApp.storage.session.set("cityAndCounty", JSON.stringify(cityAndCountyJson));
 

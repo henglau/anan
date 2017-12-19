@@ -805,7 +805,7 @@ try {
         // 检测地点
         baseApp.page.request.ajax(
             "get",
-            "QuestVehicleDataV4/" + serverusers.name + "/" + serverusers.pwd + "/" + detectCode,
+            "QuestVehicleDataV6/" + serverusers.name + "/" + serverusers.pwd + "/" + detectCode,
             null,
             function (data) {
                 try {
@@ -975,7 +975,6 @@ try {
                                 cityAndCountyJson.data.push(jsons);
                             }
                         }
-                        alert(cityAndCountyJson);
                         // 存入缓存
                         baseApp.storage.session.set("cityAndCounty", JSON.stringify(cityAndCountyJson));
 
@@ -1028,7 +1027,7 @@ try {
     baseApp.ns("page.BaseInit").getMonitoringSite = function (usersName, usersPwd, provinces, strCityName, strCountyName, Callback) {
         baseApp.page.request.ajax(
             "get",
-            "QuestSiteRegionV2/" + usersName + "/" + usersPwd + "/" + provinces + "/" + strCityName + "/" + strCountyName,
+            "QuestSiteRegisterV3/" + usersName + "/" + usersPwd + "/" + provinces + "/" + strCityName + "/" + strCountyName,
             null,
             function (data) {
                 var html = '<option value="">忽略</option>';
@@ -1071,7 +1070,7 @@ try {
 
         baseApp.page.request.ajax(
             "post",
-            "QuestVehicleDataV3/" + serverusers.name + "/" + serverusers.pwd + "/?gQuestType=" + gQuestType, JSON.stringify({
+            "QuestVehicleDataV5/" + serverusers.name + "/" + serverusers.pwd + "/?gQuestType=" + gQuestType, JSON.stringify({
                 "nPageSize": nPageSize,
                 "nPageIndex": nPageIndex,
                 "sBegTime": sBegTime,

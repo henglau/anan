@@ -1072,10 +1072,10 @@ try {
                 "nPageIndex": nPageIndex,
                 "sBegTime": sBegTime,
                 "sEndTime": sEndTime,
-                "sProvinceName": provinces,
+                "sProvince": provinces,
                 "sCityName": sCityName,
                 "sCountyName": sCountyName,
-                "nSiteType":gQuestType,
+                "nSiteType": gQuestType,
                 "sSiteName": sSiteName,
                 "nActualLane": nActualLane,
                 "nEnterChannel": 0,
@@ -1088,9 +1088,9 @@ try {
                 "sPlateName": sPlateName,
                 "nCtrlState": 0
             };
-        for(var a in ttt){
-            alert(a+': '+ttt[a]);
-        }
+        // for(var a in ttt){
+        //     alert(a+': '+ttt[a]);
+        // }
         baseApp.page.request.ajax(
             "post",
             "QuestVehicleDataV5/" + serverusers.name + "/" + serverusers.pwd, JSON.stringify({
@@ -1098,7 +1098,7 @@ try {
                 "nPageIndex": nPageIndex,
                 "sBegTime": sBegTime,
                 "sEndTime": sEndTime,
-                "sProvinceName": provinces,
+                "sProvince": provinces,
                 "sCityName": sCityName,
                 "sCountyName": sCountyName,
                 "nSiteType":gQuestType,

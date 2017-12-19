@@ -1071,7 +1071,6 @@ try {
         baseApp.page.request.ajax(
             "post",
             "QuestVehicleDataV5/" + serverusers.name + "/" + serverusers.pwd, JSON.stringify({
-                "nSiteType":gQuestType,
                 "nPageSize": nPageSize,
                 "nPageIndex": nPageIndex,
                 "sBegTime": sBegTime,
@@ -1079,13 +1078,18 @@ try {
                 "sProvinceName": provinces,
                 "sCityName": sCityName,
                 "sCountyName": sCountyName,
+                "nSiteType":gQuestType,
                 "sSiteName": sSiteName,
                 "nActualLane": nActualLane,
+                "nEnterChannel": 0,
                 "nTotalAxle": nTotalAxle,
                 "nWeightTrue": nWeightTrue,
-                "nOverMinWeight": nOverMinWeight,
-                "nOverMaxWeight": nOverMaxWeight,
-                "sPlateName": sPlateName
+                "nMinOverWeight": nOverMinWeight,
+                "nMaxOverWeight": nOverMaxWeight,
+                "nMinRatiorWeight": nOverMinWeight,
+                "nMaxRatiorWeight": nOverMaxWeight,
+                "sPlateName": sPlateName,
+                "nCtrlState": 0
             }),
             function (data) {
                 Callback(data);

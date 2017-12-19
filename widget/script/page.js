@@ -1067,30 +1067,6 @@ try {
 
         // 获取省份
         var provinces = baseApp.storage.local.get("uprovince");
-        var ttt = {
-                "nPageSize": nPageSize,
-                "nPageIndex": nPageIndex,
-                "sBegTime": sBegTime,
-                "sEndTime": sEndTime,
-                "sProvince": provinces,
-                "sCityName": sCityName,
-                "sCountyName": sCountyName,
-                "nSiteType": gQuestType,
-                "sSiteName": sSiteName,
-                "nActualLane": nActualLane,
-                "nEnterChannel": 0,
-                "nTotalAxle": nTotalAxle,
-                "nWeightTrue": nWeightTrue,
-                "nMinOverWeight": nOverMinWeight,
-                "nMaxOverWeight": nOverMaxWeight,
-                "nMinRatiorWeight": nOverMinWeight,
-                "nMaxRatiorWeight": nOverMaxWeight,
-                "sPlateName": sPlateName,
-                "nCtrlState": 0
-            };
-        // for(var a in ttt){
-        //     alert(a+': '+ttt[a]);
-        // }
         baseApp.page.request.ajax(
             "post",
             "QuestVehicleDataV5/" + serverusers.name + "/" + serverusers.pwd, JSON.stringify({

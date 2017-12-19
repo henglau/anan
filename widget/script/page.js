@@ -122,7 +122,7 @@ try {
         var server = (((sItem.addr).indexOf('http') >= 0) ? sItem.addr : "http://" + sItem.addr) + ":" + sItem.port;
 
         // 最终请求地址
-        var urls = server + "/YIV_DetectService" + ("/" + getParameter);
+        var urls = server + "/HDW_DetectService" + ("/" + getParameter);
         $.ajax({
             type: (type != null && type == "post" ? "POST" : "get"),
             url: urls,

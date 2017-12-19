@@ -1070,7 +1070,8 @@ try {
 
         baseApp.page.request.ajax(
             "post",
-            "QuestVehicleDataV5/" + serverusers.name + "/" + serverusers.pwd + "/?gQuestType=" + gQuestType, JSON.stringify({
+            "QuestVehicleDataV5/" + serverusers.name + "/" + serverusers.pwd, JSON.stringify({
+                "nSiteType":gQuestType,
                 "nPageSize": nPageSize,
                 "nPageIndex": nPageIndex,
                 "sBegTime": sBegTime,

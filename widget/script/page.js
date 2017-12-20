@@ -857,6 +857,7 @@ try {
 
                     $(attr.txtZDLX).text(TypeName); //站点类型 1-源头企业点 2-固定治超站 3-道路治超点 4-流动执法车 5-高速收费站 6-视频监控点 255-无效
                     $(attr.txtZDMC).text(data.zVehicleData.sSiteName); //站点名称
+                    alert(data.zVehicleData.sHeadImage);
                     alert('http://112.195.133.7:8020/HDW_DetectService/DownloadFileV2/admin/admin12345+/'+data.zVehicleData.sHeadImage.replaceAll(':','$').replaceAll('\\','^'));
                     // alert(data.zVehicleData.sTrailImage);
                     $(attr.txtCQTP).attr("data-url", 'http://112.195.133.7:8020/HDW_DetectService/DownloadFileV2/admin/admin12345+/'+data.zVehicleData.sHeadImage.replaceAll(':','$').replaceAll('\\','^')); //车前图片

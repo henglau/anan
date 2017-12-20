@@ -857,10 +857,7 @@ try {
 
                     $(attr.txtZDLX).text(TypeName); //站点类型 1-源头企业点 2-固定治超站 3-道路治超点 4-流动执法车 5-高速收费站 6-视频监控点 255-无效
                     $(attr.txtZDMC).text(data.zVehicleData.sSiteName); //站点名称
-                    alert(data.zVehicleData.sHeadImage);
-                    alert('http://112.195.133.7:8020/HDW_DetectService/DownloadFileV2/admin/admin12345+/'+data.zVehicleData.sHeadImage.replace(/:/g,'$').replace(/\\/g,'^'));
-                    // alert(data.zVehicleData.sTrailImage);
-                    $(attr.txtCQTP).attr("data-url", 'http://112.195.133.7:8020/HDW_DetectService/DownloadFileV2/admin/admin12345+/'+data.zVehicleData.sHeadImage.replace(/:/g,'$').replace(/\\/g,'^')); //车前图片
+                    $(attr.txtCQTP).attr("data-url", data.zVehicleData.sHeadImage); //车前图片
                     $(attr.txtCHTP).attr("data-url", data.zVehicleData.sTrailImage); //车后图片
 
                 } catch (e) {
@@ -888,7 +885,7 @@ try {
             var server = (((sItem.addr).indexOf('http') >= 0) ? sItem.addr : "http://" + sItem.addr) + ":" + sItem.port;
 
             // 最终请求地址
-            var urls = server + "/YIV_DetectService/DownloadFileV2/" + serverusers.name + "/" + serverusers.pwd + "/" + url;
+            var urls = server + "/HDW_DetectService/DownloadFileV2/" + serverusers.name + "/" + serverusers.pwd + "/" + url;
 
             $(attr.layerWin).removeClass("hidden");
             $(attr.htmlWin).find("img").remove();

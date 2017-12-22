@@ -870,7 +870,7 @@ try {
         );
 
         // 展示图片事件
-        $(attr.txtCQTP + "," + txtCSTP + "," + attr.txtCHTP).on(attr.ck, function () {
+        $(attr.txtCQTP + "," + attr.txtCSTP + "," + attr.txtCHTP).on(attr.ck, function () {
             var url = $(this).data("url");
             var urls = '';//最终图片地址
             if(url.substr(0,2) == '..'){

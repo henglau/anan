@@ -791,6 +791,7 @@ try {
             txtZDLX: "#txtZDLX", //站点类型
             txtZDMC: "#txtZDMC", //站点名称
             txtCQTP: "#txtCQTP", //车前图片
+            txtCSTP: "#txtCSTP", //车前图片
             txtCHTP: "#txtCHTP", //车后图片
         }
 
@@ -857,8 +858,9 @@ try {
 
                     $(attr.txtZDLX).text(TypeName); //站点类型 1-源头企业点 2-固定治超站 3-道路治超点 4-流动执法车 5-高速收费站 6-视频监控点 255-无效
                     $(attr.txtZDMC).text(data.zVehicleData.sSiteName); //站点名称
-                    $(attr.txtCQTP).attr("data-url", data.zVehicleData.sHeadImage); //车前图片
-                    $(attr.txtCHTP).attr("data-url", data.zVehicleData.sTrailImage); //车后图片
+                    $(attr.txtCQTP).attr("data-url", data.zVehicleData.sHeadImage||'../image/chetou.jpg'); //车前图片
+                    $(attr.txtCSTP).attr("data-url", data.zVehicleData.sBodyImage||'../image/cheshen.jpg'); //车前图片
+                    $(attr.txtCHTP).attr("data-url", data.zVehicleData.sTrailImage||'../image/chewei.jpg'); //车后图片
 
                 } catch (e) {
                     alert("数据绑定异常");
@@ -868,24 +870,29 @@ try {
         );
 
         // 展示图片事件
-        $(attr.txtCQTP + "," + attr.txtCHTP).on(attr.ck, function () {
+        $(attr.txtCQTP + "," + txtCSTP + "," + attr.txtCHTP).on(attr.ck, function () {
             var url = $(this).data("url");
-            url = url.replace(/:\\/g, "$^");
-            url = url.replace(/(\\)/g, "^");
-            if (url == null || url == "" || url.length <= 0) {
-                return false;
-            }
-            // 请求服务器地址
-            var sItem = baseApp.page.getUserSetting();
-            if (!sItem) {
-                return;
-            }
+            var urls = '';//最终图片地址
+            if(url.substr(0,2) == '..'){
+                urls = url;
+            }else{
+                url = url.replace(/:\\/g, "$^");
+                url = url.replace(/(\\)/g, "^");
+                // if (url == null || url == "" || url.length <= 0) {
+                //     return false;
+                // }
+                // 请求服务器地址
+                var sItem = baseApp.page.getUserSetting();
+                if (!sItem) {
+                    return;
+                }
 
-            // 拼接服务器地址加端口
-            var server = (((sItem.addr).indexOf('http') >= 0) ? sItem.addr : "http://" + sItem.addr) + ":" + sItem.port;
+                // 拼接服务器地址加端口
+                var server = (((sItem.addr).indexOf('http') >= 0) ? sItem.addr : "http://" + sItem.addr) + ":" + sItem.port;
 
-            // 最终请求地址
-            var urls = server + "/HDW_DetectService/DownloadFileV2/" + serverusers.name + "/" + serverusers.pwd + "/" + url;
+                // 最终请求地址
+                urls = server + "/HDW_DetectService/DownloadFileV2/" + serverusers.name + "/" + serverusers.pwd + "/" + url;
+            }
 
             $(attr.layerWin).removeClass("hidden");
             $(attr.htmlWin).find("img").remove();

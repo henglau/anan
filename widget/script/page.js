@@ -1071,7 +1071,30 @@ try {
 
         // 获取服务数据验证数据
         var serverusers = baseApp.page.authenticationServerInfo();
-
+        var obj = {
+                "nPageSize": nPageSize,
+                "nPageIndex": nPageIndex,
+                "sBegTime": sBegTime,
+                "sEndTime": sEndTime,
+                "sProvince": provinces,
+                "sCityName": sCityName,
+                "sCountyName": sCountyName,
+                "nSiteType":gQuestType,
+                "sSiteName": sSiteName,
+                "nActualLane": nActualLane,
+                "nEnterChannel": 0,
+                "nTotalAxle": nTotalAxle,
+                "nWeightTrue": nWeightTrue,
+                "nMinOverWeight": nOverMinWeight,
+                "nMaxOverWeight": nOverMaxWeight,
+                "nMinRatiorWeight": nOverMinWeight,
+                "nMaxRatiorWeight": nOverMaxWeight,
+                "sPlateName": sPlateName,
+                "nCtrlState": 0
+            };
+            for (var temp in obj) {
+                alert(temp+': '+obj[temp]);
+            }
         // 获取省份
         var provinces = baseApp.storage.local.get("uprovince");
         baseApp.page.request.ajax(
